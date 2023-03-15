@@ -1,0 +1,11 @@
+.steps{
+
+  margin: 30px 10px 30px 20px;
+}
+
+.frames{
+  background-color: rgb(243, 234, 224);
+  display: flex;
+}
+
+/* css of the html called index

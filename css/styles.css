@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Bakbak+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+body, ul, li, p, a, label, div, input{
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px ;
+  font-weight: 300 ;
+}
+
+a{
+  padding-right: 20px;
+}
+
+
+
+
+.h1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px ;
+  font-weight: 200 ;
+}
+.h2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 30px ;
+  font-weight: 300;
+}
+.h3 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 22px ;
+}
+
+.logo {
+  font-family:  'Bakbak One', cursive;
+}
+
+
+#main_nav a { color: #212934;}
+#main_nav a:hover { color: #69bb7e;}
+.navbar{
+  margin: 0px 0px 10px 0px;
+}
+
+
+#footer a { color: #dcdde1;}
+#footer a:hover { color: #68bb7d;}
+#footer ul.footer-link-list li { padding-top: 10px;}
+#footer ul.footer-icons li:hover {
+  background-color: #cfd6e1;
+  transition: .5s;
+}
+
+#footer .border-light { border-color: #2d343f;}
+
