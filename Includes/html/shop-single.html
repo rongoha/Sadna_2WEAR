@@ -25,6 +25,9 @@
                 <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@2wear.com">info@2wear.com</a>
                 <a class="navbar-sm-brand text-light text-decoration-none" href="tel:012-345-6789">012-345-6789</a>
             </div>
+            <div class="ml-auto">
+                <a class="nav-link" href="./login.html">Log Out</a>
+            </div>
         </div>
     </nav>
 
@@ -138,26 +141,52 @@
                                 Main: 100% Polyester.<br><br>
                                 
                            
+                            <!-- HTML code for the trade button and form -->
                             <div class="row pb-3">
                                 <div class="col d-grid">
-                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy" onclick="buyMes()" id="buy">Buy</button>
+                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy" onclick="buyMes()"
+                                        id="buy">Buy</button>
                                 </div>
                                 <div class="col d-grid">
-                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" onclick="cartMes()" id="addToCart">Add To Cart</button>
+                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" onclick="cartMes()"
+                                        id="addToCart">Add To Cart</button>
+                                </div>
+                                <div class="col d-grid">
+                                    <button type="button" class="btn btn-success btn-lg" name="submit" value="trade" onclick="openUploadDialog()"
+                                        id="trade">Trade</button>
                                 </div>
                             </div>
-                            <div class=" d-grid">
-                                <a class="btn btn-success" href="./shop.html"><button class="btn btn-success btn-lg px-3" >Previous</button></a>
-         
+                            <div class="d-grid">
+                                <a class="btn btn-success" href="./shop.html"><button class="btn btn-success btn-lg px-3">Previous</button></a>
                             </div>
-                        </div>
-                        
+                            
+                            <!-- HTML code for the item image and details upload form (hidden by default) -->
+                            <form id="upload-form" style="display:none;">
+                                <div class="mb-3">
+                                    <label for="item-name" class="form-label">Item Name</label>
+                                    <input type="text" class="form-control" id="item-name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="item-description" class="form-label">Item Description</label>
+                                    <textarea class="form-control" id="item-description" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="item-img" class="form-label">Item Image</label>
+                                    <input class="form-control" type="file" id="item-img" required>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-success">Upload</button>
+                                    <button type="button" class="btn btn-danger" onclick="closeUploadDialog()">Cancel</button>
+                                </div>
+                            </form>
+                            
+
+
+
+                        </div> 
                     </div>
-                    
                 </div>
-               
             </div>
-            
         </div>
     </section>
 
@@ -198,7 +227,7 @@
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            © Dayana Cohanim & Eden Den Uyl & Gal Baron | 2022
+                            © Ron Gohar & Bar Reuven & Stav Cohen & Gal Baron | 2023
                         </p>
                     </div>
                 </div>
