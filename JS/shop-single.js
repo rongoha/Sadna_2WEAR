@@ -1,14 +1,3 @@
-
-$(document).ready(function(){
-
-    $("#buy").click(function()
-    {
-        $("#buy").hide();
-        $("#addToCart").hide();
-    })
-  });
-  
-
   
  function cartMes(){
 
@@ -57,7 +46,6 @@ function showSlides(n) {
     function openUploadDialog() {
       // Hide the Buy and Add To Cart buttons
       document.getElementById("buy").style.display = "none";
-      document.getElementById("addToCart").style.display = "none";
       // Show the upload form and the Cancel button
       document.getElementById("upload-form").style.display = "block";
       document.getElementById("cancel-upload-btn").style.display = "block";
@@ -66,7 +54,6 @@ function showSlides(n) {
     function closeUploadDialog() {
       // Show the Buy and Add To Cart buttons
       document.getElementById("buy").style.display = "block";
-      document.getElementById("addToCart").style.display = "block";
       // Hide the upload form and the Cancel button
       document.getElementById("upload-form").style.display = "none";
       document.getElementById("cancel-upload-btn").style.display = "none";
