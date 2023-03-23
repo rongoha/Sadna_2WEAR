@@ -1,24 +1,16 @@
+window.onload = function () {
+    const confirmTermsCheckbox = document.querySelector('#confirm-terms');
+    const paypalButton = document.querySelector('.paypal-button input[type="image"]');
+    const paymentErrorMessage = 'Please confirm the terms of use before making the payment.';
 
-// Render the PayPal button
-paypal.Buttons({
-    createOrder: function (data, actions) {
-        // Set up the transaction
-        return actions.order.create({
-    purchase_units: [
-{
-    amount: {
-    value: '50.00',
-currency_code: 'USD'
-                    }
-                }
-]
-        });
-    },
-onApprove: function (data, actions) {
-        // Capture the funds from the transaction
-        return actions.order.capture().then(function (details) {
-    // Show a success message to the buyer
-    alert('Transaction completed by ' + details.payer.name.given_name + '!');
-        });
-    }
-}).render('#paypal-button-container');
+    confirmTermsCheckbox.addEventListener('change', (event) => {
+        paypalButton.disabled = !event.target.checked;
+    });
+
+    paypalButton.addEventListener('click', (event) => {
+        if (!confirmTermsCheckbox.checked) {
+            event.preventDefault();
+            alert(paymentErrorMessage);
+        }
+    });
+}

@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
         integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
         crossorigin="" />
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="../../css/order-summary.css">
     <script src="../../JS/order-summary.js"></script>
 
@@ -54,12 +52,19 @@
                     Confirm terms of use
                 </label>
             </div>
-            <div id="paypal-button-container" class="paypal-button"></div>
+            <form class="paypal-button" action="https://www.sandbox.paypal.com/cgi-bin/webscr" method="post">
+                <input type="hidden" name="cmd" value="_xclick">
+                <input type="hidden" name="business" value="stavco28@gmail.com">
+                <input type="hidden" name="currency_code" value="ILS">
+                <input type="hidden" name="amount" value="150">
+                <input type="hidden" name="item_name" value="Test Item">
+                <input type="hidden" name="return" value="#">
+                <input type="hidden" name="cancel_return" value="http://yourwebsite.com/cancel.html">
+                <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_buynow_LG.gif" name="submit"
+                    alt="PayPal - The safer, easier way to pay online!">
+            </form>
         </div>
     </div>
-
-<!-- PayPal JavaScript SDK -->
-<script src="https://www.paypal.com/sdk/js?client-id=YOUR_CLIENT_ID&currency=USD"></script>
 
     <footer class="bg-dark" id="footer">
         <div class="container">
