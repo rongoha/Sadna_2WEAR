@@ -43,20 +43,3 @@
 }
 
 
-/* keep the footer down */
-html,
-body {
-    height: 100%;
-    margin: 0;
-}
-/* keep the footer down */
-#wrapper {
-    min-height: 100%;
-    position: relative;
-}
-/* keep the footer down */
-footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-}
