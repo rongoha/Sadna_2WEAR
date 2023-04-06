@@ -71,21 +71,8 @@
     <div class="container py-5">
         <div class="row py-5">
             <form method = "post" action = "../sell-my-clothes.php" col-md-9 m-auto role="form1" name="form1">
-                <div class="row">
-                    <!--publish form-->
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="inputname">Full Name</label>
-                        <input type="text" class="form-control mt-1" id="name" pattern="[א-תA-Za-z ]+" name="full_name" placeholder="Name" minlength="4" maxlength="15" required >
-                    </div>
-                    <div class="form-group col-md-6 mb-3">
-                        <label for="inputemail">Email</label>
-                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email" required>
-                    </div>
-                </div>
-	
-
+                
 				<div class="row">
-					
                     <div class="form-group col-md-6 mb-3 form-field" id="city-selection">
                         <label for="inputlocation">City</label>
                         <input type="text" class="form-control mt-1" list="cities-data" pattern="[א-תA-Za-z ]+" id="location" name="location" minlength="2" maxlength="15" placeholder="City" required>
@@ -104,7 +91,10 @@
 						<label for="inputPrice">Price</label>
 						<input type="number" min="1" max="10000000000" class="form-control mt-1" id="price" name="price" placeholder="Price" required>
 					</div>
-
+                    <div class="form-group col-md-6 mb-3">
+                        <label for="inputname">Title</label>
+                        <input type="text" class="form-control mt-1" id="title" pattern="[א-תA-Za-z ]+" name="title" placeholder="Title" minlength="3" maxlength="25" required >
+                    </div>
 
             
 					<div class="mb-3 ">

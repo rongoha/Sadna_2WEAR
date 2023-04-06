@@ -11,9 +11,9 @@
     <?php
   
         $host = "localhost:3306";
-        $user = "galbao_user";
-        $pass = "1122334455";
-        $db = "galbao_items";
+        $user = "isgalbao_user";
+        $pass = "Aa123456!";
+        $db = "isgalbao_2wear";
 
        //create connection
        $conn=new mysqli($host,$user,$pass,$db);
