@@ -1,13 +1,25 @@
-  
- function cartMes(){
 
-  window.alert('The piece has been successfully added to your cart - this page is not Available');
-}
-function buyMes(){
+var address = "קהילת יאסי 14, תל אביב";
+var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + address;
 
-  window.alert('Thank you for your purchase - this page is not Available');
-}
-
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    var lat = data[0].lat;
+    var lon = data[0].lon;
+    var mymap = L.map('map').setView([lat, lon], 14);
+    //L.marker([lat, lon]).addTo(mymap).bindPopup(address).openPopup();
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(mymap);
+    L.circle([lat, lon], {
+      color: '#6699CC',
+      fillColor: '#6699CC',
+      fillOpacity: 0.2,
+      radius: 500
+    }).addTo(mymap);
+    mymap.attributionControl.setPrefix(false);
+    });
 
 
 // slide pictures
