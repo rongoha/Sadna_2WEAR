@@ -11,11 +11,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-    
-
-    
-
-
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+    <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
 </head>
 
 <body>
@@ -24,6 +21,9 @@
             <div>
                 <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@2wear.com">info@2wear.com</a>
                 <a class="navbar-sm-brand text-light text-decoration-none" href="tel:012-345-6789">012-345-6789</a>
+            </div>
+            <div class="ml-auto">
+                <a class="nav-link" href="./login.html">Log Out</a>
             </div>
         </div>
     </nav>
@@ -53,7 +53,7 @@
                                 <a class="nav-link" href="./sell-my-clothes.html">Sell My Clothes</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#" title="This page is not Available" onclick="contactMes()">Contact</a>
+                                <li><a class="nav-link" href="./contact.html">Contact</a> </li>
                             </li>
                         </ul>
                     </div>
@@ -136,29 +136,65 @@
                                 Regular fit<br>
                                 Smooth woven fabric<br>
                                 Main: 100% Polyester.<br><br>
-                                
+                            </p>
+
+                            <div id="map" style="height: 250px"></div>
+                            
                            
+                            <!-- HTML code for the trade button and form -->
                             <div class="row pb-3">
                                 <div class="col d-grid">
-                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy" onclick="buyMes()" id="buy">Buy</button>
+                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="buy" onclick="location.href='order-summary.html'"
+                                        id="buy">Buy</button>
                                 </div>
                                 <div class="col d-grid">
-                                    <button type="submit" class="btn btn-success btn-lg" name="submit" value="addtocard" onclick="cartMes()" id="addToCart">Add To Cart</button>
+                                    <button type="button" class="btn btn-success btn-lg" name="submit" value="trade" onclick="openUploadDialog()"
+                                        id="trade">Trade</button>
                                 </div>
                             </div>
-                            <div class=" d-grid">
-                                <a class="btn btn-success" href="./shop.html"><button class="btn btn-success btn-lg px-3" >Previous</button></a>
-         
-                            </div>
-                        </div>
+                            
+                            <!-- HTML code for the item image and details upload form (hidden by default) -->
+                            <form id="upload-form" style="display:none" method = "post" action = "../PHP/trade-clothes.php">
+                                <div class="mb-3">
+                                    <label for="item-name" class="form-label">Item Name</label>
+                                    <input type="text" class="form-control" id="item-name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="item-description" class="form-label">Item Description</label>
+                                    <textarea class="form-control" id="item-description" rows="3" required></textarea>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="item-img" class="form-label">Item Image</label>
+                                    <input class="form-control" type="file" id="item-img" required>
+                                </div>
+                                <div class="d-grid gap-2">
+                                    <button type="submit" class="btn btn-success">Upload</button>
+                                    <button type="button" class="btn btn-danger" onclick="closeUploadDialog()">Cancel</button>
+                                </div>
+                            </form>
+                        </div> 
                         
                     </div>
                     
-                </div>
-               
             </div>
-            
         </div>
+        <div class="col-lg-12 mt-4">
+            <div class="card">
+                <div class="card-body"> 
+                 <h1 class="h2">Looking For Something Similar?</h1>
+                 <div class="center">
+                    <img src="https://placehold.it/200x200" alt="Item Image" class="line">
+                    <img src="https://placehold.it/200x200" alt="Item Image" class="line">
+                    <img src="https://placehold.it/200x200" alt="Item Image" class="line">
+                    <img src="https://placehold.it/200x200" alt="Item Image" class="line">
+                    <img src="https://placehold.it/200x200" alt="Item Image" class="line">
+                 </div>
+                
+                
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
 
     
@@ -187,7 +223,7 @@
                     <ul class="list-unstyled text-light footer-link-list">
                         <li><a class="text-decoration-none" href="../../index.html">Home</a></li>
                         <li><a class="text-decoration-none" href="./about.html">About Us</a></li>
-                        <li><a class="text-decoration-none" href="#" title="This page is not Available" onclick="contactMes()">Contact Us</a></li>
+                        <li><a class="nav-link" href="./contact.html">Contact Us</a></li>
                     </ul>
                 </div>
             </div>
@@ -198,7 +234,7 @@
                 <div class="row pt-2">
                     <div class="col-12">
                         <p class="text-left text-light">
-                            © Dayana Cohanim & Eden Den Uyl & Gal Baron | 2022
+                            © Ron Gohar & Bar Reuven & Stav Cohen & Gal Baron | 2023
                         </p>
                     </div>
                 </div>
@@ -208,6 +244,7 @@
 
     <script src="../../JS/index.js"></script>
     <script src="../../JS/shop-single.js"></script>
+    
 </body>
 
 </html>
