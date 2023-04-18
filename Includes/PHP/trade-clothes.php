@@ -34,40 +34,37 @@
        if(isset($_POST['submit'])){
            $full_name =  $_POST['full_name'];
            $email =  $_POST['email'];
-           $price =  $_POST['price'];
-           $location =  $_POST['location'];
-           $color =  $_POST['color'];
-           $size =  $_POST['size'];
-           $condition_item =  $_POST['condition_item'];
-           $category =  $_POST['Radio'];
-           $picture =  $_POST['picture'];
-           $description =  $_POST['description'];
+           $item_name =  $_POST['item_name'];
+           $item_description =  $_POST['item_description'];
+           $item_img =  $_POST['item_img'];
        }
 
+
+       echo $full_name,$email,$item_name,$item_description,$item_img;
        //validation if null inputs
 
-       if(empty($full_name) || empty($email) || empty($price) || empty($location) || empty($color) || empty($size) || empty($condition_item) || empty($picture)){
+       if(empty($full_name) || empty($email) || empty($item_name) || empty($item_description)|| empty($item_img)){
 
            echo "Please enter all the requst fields!";
        }
        else
        {
-           $sql="INSERT INTO Items(full_name,email,price,location,color,size,condition_item,category,picture,description) 
-           VALUES ('$full_name','$email','$price','$location','$color','$size','$condition_item','$category','$picture','$description')";
+           $sql="INSERT INTO trade_items(full_name,email,name_item,description,image) 
+           VALUES ('$full_name','$email','$item_name','$item_description','$item_img')";
            
        }
            
 
         if($conn->query($sql)===TRUE){
         echo '<div class="container-fluid bg-light py-5"><div class="col-md-6 m-auto text-center">';
-        echo '<h1> Thank you ' .$_POST['full_name'].', We got your details, We just need your confirm on the next page to publish!<br></h1>';
-        echo '<button class="btn btn-success btn-lg" onclick="location.href=\'../../confirm-publish.html\'">Next Page</button>';
+        echo '<h1> Thank you ' .$_POST['full_name'].', We got your details, Please wait for the response from the seller :)<br></h1>';
+        echo '<button class="btn btn-success btn-lg" onclick="location.href=\'../../index.html\'">Home Page</button>';
         echo '</div>';
         echo '</div>';
         }
 
         else{
-            echo "Can not add new user.  Error is: <br>".$conn->error;
+            echo "Can not add item for trade.  Error is: <br>".$conn->error;
         
         }
 
