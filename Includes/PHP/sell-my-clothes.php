@@ -35,7 +35,9 @@
            $full_name =  $_POST['full_name'];
            $email =  $_POST['email'];
            $price =  $_POST['price'];
-           $location =  $_POST['location'];
+           $title =  $_POST['title'];
+           $street =  $_POST['street-choice'];
+           $city =  $_POST['location'];
            $color =  $_POST['color'];
            $size =  $_POST['size'];
            $condition_item =  $_POST['condition_item'];
@@ -44,30 +46,31 @@
            $description =  $_POST['description'];
        }
 
+
        //validation if null inputs
 
-       if(empty($full_name) || empty($email) || empty($price) || empty($location) || empty($color) || empty($size) || empty($condition_item) || empty($picture)){
+       if(empty($full_name) || empty($email) || empty($price) || empty($city) || empty($title) || empty($street) || empty($color) || empty($size)  || empty($picture)){
 
            echo "Please enter all the requst fields!";
        }
        else
        {
-           $sql="INSERT INTO Items(full_name,email,price,location,color,size,condition_item,category,picture,description) 
-           VALUES ('$full_name','$email','$price','$location','$color','$size','$condition_item','$category','$picture','$description')";
+           $sql="INSERT INTO sales_items(full_name,email,price,title,street,city,color,size,condition_item,category,picture,description) 
+           VALUES ('$full_name','$email','$price','$title','$street','$city','$color','$size','$condition_item','$category','$picture','$description')";
            
        }
            
 
         if($conn->query($sql)===TRUE){
         echo '<div class="container-fluid bg-light py-5"><div class="col-md-6 m-auto text-center">';
-        echo '<h1> Thank you ' .$_POST['full_name'].', We got your details, We just need your confirm on the next page to publish!<br></h1>';
-        echo '<button class="btn btn-success btn-lg" onclick="location.href=\'../../confirm-publish.html\'">Next Page</button>';
+        echo '<h1> Thank you ' .$_POST['full_name'].', We got your details, the item have been added to our shop :)<br></h1>';
+        echo '<button class="btn btn-success btn-lg" onclick="location.href=\'../../index.html\'">Home Page</button>';
         echo '</div>';
         echo '</div>';
         }
 
         else{
-            echo "Can not add new user.  Error is: <br>".$conn->error;
+            echo "Can not add new item.  Error is: <br>".$conn->error;
         
         }
 

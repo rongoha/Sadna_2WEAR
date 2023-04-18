@@ -69,9 +69,17 @@
 
     <div class="container py-5">
         <div class="row py-5">
-            <form method = "post" action = "../sell-my-clothes.php" col-md-9 m-auto role="form1" name="form1">
+            <form method = "post" action = "../PHP/sell-my-clothes.php" col-md-9 m-auto role="form1" name="form1">
                 
 				<div class="row">
+                    <div class="form-group col-md-6 mb-3 form-field" >
+                        <label for="inputname">Full Name</label>
+                    <input type="text" class="form-control mt-1" id="name" pattern="[א-תA-Za-z ]+" name="full_name" placeholder="Name" minlength="4" maxlength="15" required >
+                    </div>
+                    <div class="form-group col-md-6 mb-3 form-field" >
+                        <label for="inputemail">Email</label>
+                        <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email" required>
+                    </div>
                     <div class="form-group col-md-6 mb-3 form-field" id="city-selection">
                         <label for="inputlocation">City</label>
                         <input type="text" class="form-control mt-1" list="cities-data" pattern="[א-תA-Za-z ]+" id="location" name="location" minlength="2" maxlength="15" placeholder="City" required>
@@ -100,33 +108,33 @@
                         <br>
 						<label for="inputColors">Colors</label>
                             <select name="color" required>
-                                <option value="1">Black</option>
-                                <option value="2">White</option>
-                                <option value="3">Red</option> 
-                                <option value="4">Green</option> 
-                                <option value="5">Pink</option> 
-                                <option value="6">Blue</option> 
-                                <option value="7">Yellow</option> 
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                                <option value="Red">Red</option> 
+                                <option value="Green">Green</option> 
+                                <option value="Pink">Pink</option> 
+                                <option value="Blue">Blue</option> 
+                                <option value="Yellow">Yellow</option> 
                             </select> 					
 					</div>
 					<div class="form-group col-md-6 mb-3">
 						<label for="inputSize">Size</label>
                             <select name="size" required>
-                                <option value="1">XS</option>
-                                <option value="2">S</option>
-                                <option value="3">M</option>
-                                <option value="5">L</option> 
-                                <option value="6">XL</option> 
+                                <option value="XS">XS</option>
+                                <option value="S">S</option>
+                                <option value="M">M</option>
+                                <option value="L">L</option> 
+                                <option value="XL">XL</option> 
                             </select> 					
 					</div>
                  
                     <div class="form-group mb-3">
 						<label for="inputCondition" >Condition</label>
                             <select name="condition_item" required>
-                                <option value="1">New</option>
-                                <option value="2">Used - Like New</option>
-                                <option value="3">Used - Like New</option> 
-                                <option value="4">Used - Fair</option> 
+                                <option value="New">New</option>
+                                <option value="Used - Like New">Used - Like New</option>
+                                <option value="Used - Like New">Used - Like New</option> 
+                                <option value="Used - Fair">Used - Fair</option> 
                             </select> 					
 					</div>
                     
@@ -134,14 +142,14 @@
 				<br>
 				<div>
                     <p><b> Categories</b> </p>
-                    <p> T-shirt <input type= "Radio" name= "Radio" value="Type1"></p>
-                    <p> Pants <input type= "Radio" name= "Radio" value="Type2"></p>
-                    <p> Coats & Jackets <input type= "Radio" name= "Type3" value="Coats & Jackets"></p>
-                    <p> Tops <input type= "Radio" name= "Radio" value="Type4"></p>
-                    <p> Blazers <input type= "Radio" name= "Radio" value="Type5"></p>
-                    <p> Jeans <input type= "Radio" name= "Radio" value="Type6"></p>
-                    <p> Skirts <input type= "Radio" name= "Radio" value="Type7"></p>
-                    <p> Shoes <input type= "Radio" name= "Radio" value="Type8"></p>
+                    <p> T-shirt <input type= "Radio" name= "Radio" value="T-shirt"></p>
+                    <p> Pants <input type= "Radio" name= "Radio" value="Pants"></p>
+                    <p> Coats & Jackets <input type= "Radio" name= "Coats & Jackets" value="Coats & Jackets"></p>
+                    <p> Tops <input type= "Radio" name= "Radio" value="Tops"></p>
+                    <p> Blazers <input type= "Radio" name= "Radio" value="Blazers"></p>
+                    <p> Jeans <input type= "Radio" name= "Radio" value="Jeans"></p>
+                    <p> Skirts <input type= "Radio" name= "Radio" value="Skirts"></p>
+                    <p> Shoes <input type= "Radio" name= "Radio" value="Shoes"></p>
                 </div>
                 <br>
 				<div>
