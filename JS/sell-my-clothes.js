@@ -94,9 +94,7 @@ cities_input.addEventListener("change", (event) => {
     streets_data_id,
     streets_resource_id,
     street_name_key,
-    {
-      שם_ישוב: cities_input.value
-    },
-    32000
+    `{"${city_name_key}": "${cities_input.value}"}`,
+    1000000 // or any other desired limit
   );
 });

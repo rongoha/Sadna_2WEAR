@@ -22,9 +22,7 @@
                 <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@2wear.com">info@2wear.com</a>
                 <a class="navbar-sm-brand text-light text-decoration-none" href="tel:012-345-6789">012-345-6789</a>
             </div>
-            <div class="ml-auto">
-                <a class="nav-link" href="./login.html">Log Out</a>
-            </div>
+
         </div>
     </nav>
 
@@ -156,6 +154,15 @@
                             <!-- HTML code for the item image and details upload form (hidden by default) -->
                             <form id="upload-form" style="display:none" method = "post" action = "../PHP/trade-clothes.php">
                                 <div class="mb-3">
+                                    <label for="inputname">Full Name</label>
+                                <input type="text" class="form-control mt-1" id="name" pattern="[א-תA-Za-z ]+" name="full_name" placeholder="Name" minlength="4" maxlength="15" required >
+                                </div>
+                                <div class="mb-3">
+                                    <label for="inputemail">Email</label>
+                                    <input type="email" class="form-control mt-1" id="email" name="email" placeholder="Email" required>
+                                </div>
+                                
+                                <div class="mb-3">
                                     <label for="item-name" class="form-label">Item Name</label>
                                     <input type="text" class="form-control" id="item-name" required>
                                 </div>
@@ -167,6 +174,7 @@
                                     <label for="item-img" class="form-label">Item Image</label>
                                     <input class="form-control" type="file" id="item-img" required>
                                 </div>
+                                
                                 <div class="d-grid gap-2">
                                     <button type="submit" class="btn btn-success">Upload</button>
                                     <button type="button" class="btn btn-danger" onclick="closeUploadDialog()">Cancel</button>
