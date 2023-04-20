@@ -31,7 +31,7 @@
        
 
         //get data
-       if(isset($_POST['submit'])){
+       if(isset($_POST['sumbit-trade'])){
            $full_name =  $_POST['full_name'];
            $email =  $_POST['email'];
            $item_name =  $_POST['item_name'];
@@ -40,7 +40,11 @@
        }
 
 
-       echo $full_name,$email,$item_name,$item_description,$item_img;
+       echo $full_name;
+       echo $email;
+       echo $item_name;
+       echo $item_description;
+       echo $item_img;
        //validation if null inputs
 
        if(empty($full_name) || empty($email) || empty($item_name) || empty($item_description)|| empty($item_img)){
