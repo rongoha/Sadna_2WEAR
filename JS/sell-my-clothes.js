@@ -1,9 +1,12 @@
 /**
- * Select a street by city in Israel
- * Cities data is from https://data.gov.il/dataset/citiesandsettelments
- * Streets data is from https://data.gov.il/dataset/321
- * API documentation https://docs.ckan.org/en/latest/maintaining/datastore.html#ckanext.datastore.logic.action.datastore_search
- */
+* Select a street by city in Israel
+* Cities data is from https://data.gov.il/dataset/citiesandsettelments
+* Streets data is from https://data.gov.il/dataset/321
+* API documentation https://docs.ckan.org/en/latest/maintaining/datastore.html#ckanext.datastore.logic.action.datastore_search
+*/
+
+
+
 
 // REST API URL
 const api_url = "https://data.gov.il/api/3/action/datastore_search";
@@ -94,9 +97,7 @@ cities_input.addEventListener("change", (event) => {
     streets_data_id,
     streets_resource_id,
     street_name_key,
-    {
-      שם_ישוב: cities_input.value
-    },
-    32000
+    `{"${city_name_key}": "${cities_input.value}"}`,
+    1000000 // or any other desired limit
   );
 });

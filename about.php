@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,58 +8,15 @@
     <title>2WEAR - About Page</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="shortcut icon" type="image/x-icon" href="../../img/favicon.ico">
-    <link rel="stylesheet" href="../../css/styles.css">
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon.ico">
+    <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap">
 
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="nav_top">
-        <div class="container text-light">
-            <div>
-                <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@2wear.com">info@2wear.com</a>
-                <a class="navbar-sm-brand text-light text-decoration-none" href="tel:012-345-6789">012-345-6789</a>
-            </div>
-            <div class="ml-auto">
-                <a class="nav-link" href="./login.html">Log Out</a>
-            </div>
-        </div>
-    </nav>
-
-<header>
-        <nav class="navbar navbar-expand-lg navbar-light shadow">
-            <div class="container d-flex justify-content-between align-items-center">
-                <a class="navbar-brand text-success logo h1 align-self-center" href="../../index.html">
-                    2WEAR
-                </a>
-    
-                <div class="navbar-collapse" id="main_nav">
-                    <div class="flex-fill">
-                        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                            <li class="nav-item">
-                                 <a class="nav-link" href="../../index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./about.html">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./shop.html">Shop</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./sell-my-clothes.html">Sell My Clothes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-    
-            </div>
-        </nav>
-    </header>
+    <?php include 'includes/navbar.php'; ?>
 
 
 
@@ -100,19 +60,19 @@
                        
         <div class="row">
             <div class="col-12 col-md-3 p-5 mt-3">
-                <a href="#"><img src="../../img/ron-black.png" class="rounded-circle img-fluid border"></a>
+                <a href="#"><img src="img/ron-black.png" class="rounded-circle img-fluid border"></a>
                 <h5 class="text-center mt-3 mb-3">Ron Gohar</h5>
             </div>
             <div class="col-12 col-md-3 p-5 mt-3">
-                <a href="#"><img src="../../img/bar-black.png" class="rounded-circle img-fluid border"></a>
+                <a href="#"><img src="img/bar-black.png" class="rounded-circle img-fluid border"></a>
                 <h5 class="text-center mt-3 mb-3">Bar Reuven</h5>
             </div>
             <div class="col-12 col-md-3 p-5 mt-3">
-                <a href="#"><img src="../../img/stav-balck.png" class="rounded-circle img-fluid border"></a>
+                <a href="#"><img src="img/stav-balck.png" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3">Stav Cohen</h2>
             </div>
             <div class="col-12 col-md-3 p-5 mt-3">
-                <a href="#"><img src="../../img/galb.jpg" class="rounded-circle img-fluid border"></a>
+                <a href="#"><img src="img/galb.jpg" class="rounded-circle img-fluid border"></a>
                 <h2 class="h5 text-center mt-3 mb-3">Gal Baron</h2>
             </div>
         </div>
@@ -135,7 +95,7 @@
                             <a class="text-decoration-none" href="tel:012-345-6789">012-345-6789</a>
                         </li>
                         <li>
-                            <a class="text-decoration-none" href="mailto:info@company.com">info@2wear.com</a>
+                            <a class="text-decoration-none" href="mailto:2wearclothings@gmail.com">2wearclothings@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -143,9 +103,9 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="../../index.html">Home</a></li>
-                        <li><a class="text-decoration-none" href="./about.html">About Us</a></li>
-                        <a class="nav-link" href="./contact.html">Contact Us</a>
+                        <li><a class="text-decoration-none" href="index.php">Home</a></li>
+                        <li><a class="text-decoration-none" href="about.php">About Us</a></li>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
                     </ul>
                 </div>
             </div>
@@ -163,7 +123,7 @@
             </div>
         </div>
     </footer>
-    <script src="../../JS/index.js"></script>
+    <script src="JS/index.js"></script>
 </body>
 
 

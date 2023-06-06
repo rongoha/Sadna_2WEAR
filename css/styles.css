@@ -56,3 +56,19 @@ a{
   text-align: center;
 }
 
+.form-check .form-check-input{
+    float: inherit !important;
+}
+
+.shop-image{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+.similiar-image{
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+

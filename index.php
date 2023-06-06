@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,55 +17,17 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg bg-dark navbar-light d-none d-lg-block" id="nav_top">
-        <div class="container text-light">
-            <div>
-                <a class="navbar-sm-brand text-light text-decoration-none" href="mailto:info@company.com">info@2wear.com</a>
-                <a class="navbar-sm-brand text-light text-decoration-none" href="tel:012-345-6789">012-345-6789</a>
-            </div>
-            <div class="ml-auto">
-                <a class="nav-link" href="./includes/html/login.html">Log Out</a>
-            </div>
-        </div>
-    </nav>
-
-
-<header>
-        <nav class="navbar navbar-expand-lg navbar-light shadow">
-            <div class="container d-flex justify-content-between align-items-center">
-                <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
-                    2WEAR
-                </a>
     
-                <div class="navbar-collapse" id="main_nav">
-                    <div class="flex-fill">
-                        <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-                            <li class="nav-item">
-                                 <a class="nav-link" href="./index.html">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./includes/html/about.html">About Us</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./includes/html/shop.html">Shop</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./includes/html/sell-my-clothes.html">Sell My Clothes</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="./includes/html/contact.html">Contact</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-    
-            </div>
-        </nav>
-    </header>
-
+        <?php include 'includes/navbar.php'; ?>
         <div class="carousel-inner">
             <div class="container">
                 <div class="row p-5 frames">
+                    <?php 
+                        if(isset($_SESSION['message'])){
+                            echo $_SESSION['message'];
+                            unset($_SESSION['message']);
+                        }
+                    ?>
                     <div class="mx-auto col-md-8 col-lg-6 order-lg-last">
                         <img class="img-fluid" src="./img/banner_img_01.jpg" alt="image">
                     </div>
@@ -92,38 +57,12 @@
                     <h3>3 - Uploading products</h3>
                     <img class="steps" width="65" height="66" src="./img/step4.svg" alt="4.Starting to sell">
                     <h3>4 - Starting to sell</h3>
-                    <p class="text-center steps"><a class="btn btn-success" href="./Includes/html/sell-my-clothes.html">Let's Start</a></p>
+                    <p class="text-center steps"><a class="btn btn-success" href="sell-my-clothes.php">Let's Start</a></p>
             </div>
         </div>
     </section>
 
-    <section>
-        <div style="text-align:center"> 
-            <video id="video" src="./img/video1.mp4" controls width="700" class="rounded"  ></video>
-        </div>
-    </section>
-
-    <section class="container py-5">
-        <div class="row text-center pt-3">
-            <div class="col-lg-6 m-auto">
-                <h1 class="h1">The Best Sellers of<br> The Month in 2WEAR</h1>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./img/category_img_01.jpg" class="rounded-circle img-fluid border"></a>
-                <h5 class="text-center mt-3 mb-3">Yuval Kaspit</h5>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./img/category_img_02.jpg" class="rounded-circle img-fluid border"></a>
-                <h2 class="h5 text-center mt-3 mb-3">Nadir Eliyaho</h2>
-            </div>
-            <div class="col-12 col-md-4 p-5 mt-3">
-                <a href="#"><img src="./img/category_img_03.jpg" class="rounded-circle img-fluid border"></a>
-                <h2 class="h5 text-center mt-3 mb-3">Ariel Cohen</h2>
-            </div>
-        </div>
-    </section>
+   
 
 
 
@@ -140,7 +79,7 @@
                             <a class="text-decoration-none" href="tel:012-345-6789">012-345-6789</a>
                         </li>
                         <li>
-                            <a class="text-decoration-none" href="mailto:info@company.com">info@2wear.com</a>
+                            <a class="text-decoration-none" href="mailto:info@company.com">2wearclothings@gmail.com</a>
                         </li>
                     </ul>
                 </div>
@@ -148,9 +87,9 @@
                 <div class="col-md-4 pt-5">
                     <h2 class="h2 text-light border-bottom pb-3 border-light">Further Info</h2>
                     <ul class="list-unstyled text-light footer-link-list">
-                        <li><a class="text-decoration-none" href="index.html">Home</a></li>
-                        <li><a class="text-decoration-none" href="./includes/html/about.html">About Us</a></li>
-                        <li><a class="nav-link" href="./includes/html/contact.html">Contact Us</a></li>
+                        <li><a class="text-decoration-none" href="index.php">Home</a></li>
+                        <li><a class="text-decoration-none" href="about.php">About Us</a></li>
+                        <a class="nav-link" href="contact.php">Contact Us</a>
                     </ul>
                 </div>
             </div>

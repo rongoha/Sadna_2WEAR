@@ -1,5 +1,3 @@
-
-var address = "קהילת יאסי 14, תל אביב";
 var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + address;
 
 fetch(url)
@@ -58,6 +56,7 @@ function showSlides(n) {
     function openUploadDialog() {
       // Hide the Buy and Add To Cart buttons
       document.getElementById("buy").style.display = "none";
+      document.getElementById("trade").style.display = "none";
       // Show the upload form and the Cancel button
       document.getElementById("upload-form").style.display = "block";
       document.getElementById("cancel-upload-btn").style.display = "block";
@@ -66,6 +65,7 @@ function showSlides(n) {
     function closeUploadDialog() {
       // Show the Buy and Add To Cart buttons
       document.getElementById("buy").style.display = "block";
+      document.getElementById("trade").style.display = "block";
       // Hide the upload form and the Cancel button
       document.getElementById("upload-form").style.display = "none";
       document.getElementById("cancel-upload-btn").style.display = "none";
