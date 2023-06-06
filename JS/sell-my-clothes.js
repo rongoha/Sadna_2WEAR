@@ -1,9 +1,12 @@
 /**
- * Select a street by city in Israel
- * Cities data is from https://data.gov.il/dataset/citiesandsettelments
- * Streets data is from https://data.gov.il/dataset/321
- * API documentation https://docs.ckan.org/en/latest/maintaining/datastore.html#ckanext.datastore.logic.action.datastore_search
- */
+* Select a street by city in Israel
+* Cities data is from https://data.gov.il/dataset/citiesandsettelments
+* Streets data is from https://data.gov.il/dataset/321
+* API documentation https://docs.ckan.org/en/latest/maintaining/datastore.html#ckanext.datastore.logic.action.datastore_search
+*/
+
+
+
 
 // REST API URL
 const api_url = "https://data.gov.il/api/3/action/datastore_search";

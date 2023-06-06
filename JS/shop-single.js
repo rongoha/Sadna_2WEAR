@@ -1,5 +1,3 @@
-
-var address = "קהילת יאסי 14, תל אביב";
 var url = "https://nominatim.openstreetmap.org/search?format=json&q=" + address;
 
 fetch(url)
