@@ -3,17 +3,19 @@ We, four young programmers - Bar Reuven, Gal Baron, Ron Gover, and Stav Cohen - 
 
 ## Technologies Used
 ## Client-side:
-HTML
-CSS
-JavaScript
-Bootstrap
+* HTML
+* CSS
+* JavaScript
+* Bootstrap
 
 # Server-side:
-PHP
-000webhost
-phpMyAdmin
-MySQL
-Additional Integrations
+* PHP
+* 000webhost
+* phpMyAdmin
+* MySQL
+
+  
+# Additional Integrations
 In addition to the technologies mentioned above, we connected the platform to a cPanel server for data storage and management. We also integrated the platform with OpenStreetMap and PayPal APIs to provide enhanced functionality. Also, we use 'Mailer' files to create in our own API.
 
 # 2WEAR Website
