@@ -16,7 +16,7 @@ We, four young programmers - Bar Reuven, Gal Baron, Ron Gover, and Stav Cohen - 
 
   
 # Additional Integrations
-In addition to the technologies mentioned above, we connected the platform to a cPanel server for data storage and management. We also integrated the platform with OpenStreetMap and PayPal APIs to provide enhanced functionality. Also, we use 'Mailer' files to create in our own API.
+In addition to the technologies mentioned above, we connected the platform to a 000webhost server for data storage and management. We also integrated the platform with OpenStreetMap and PayPal APIs to provide enhanced functionality. Also, we use 'Mailer' files to create in our own API.
 
 # 2WEAR Website
 Check out the 2WEAR website at: https://app2wear.000webhostapp.com/index.php
