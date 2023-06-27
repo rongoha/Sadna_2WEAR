@@ -1,14 +1,14 @@
 # 2WEAR Project
 We, four young programmers - Bar Reuven, Gal Baron, Ron Gover, and Stav Cohen - collaborated to develop the 2WEAR project. Our aim was to create a platform for buying, selling, and exchanging second-hand clothing, with the primary goal of promoting clothing recycling and protecting the environment.
 
-## Technologies Used
+# Technologies Used
 ## Client-side:
 * HTML
 * CSS
 * JavaScript
 * Bootstrap
 
-# Server-side:
+## Server-side:
 * PHP
 * 000webhost
 * phpMyAdmin
